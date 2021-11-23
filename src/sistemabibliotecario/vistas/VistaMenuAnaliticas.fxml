@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+
+<GridPane 
+    id="GridPane"  
+    prefHeight="720.0" 
+    prefWidth="900.0"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorMenuAnaliticas">
+    
+    <stylesheets>
+        <URL value="@../estilos/EstiloGeneral.css" />
+    </stylesheets>
+    
+    <Label
+        text="Analíticas"
+        prefWidth="900"
+        alignment="CENTER"  
+        styleClass="titulo"
+        GridPane.rowIndex="0" />
+    <VBox 
+        alignment="CENTER"
+        prefWidth="900"
+        spacing="180"
+        GridPane.rowIndex="1">
+        <padding>
+            <Insets top="130"/>
+        </padding>
+        
+        <VBox alignment="CENTER" spacing="35">
+            <Button 
+                text="Préstamos de Recursos"
+                styleClass="boton-solido"
+                prefWidth="300"/>
+            <Button 
+                text="Visitas a Sala"
+                styleClass="boton-solido"
+                prefWidth="300"/>
+        </VBox>
+        <Button 
+            text="Atrás"
+            styleClass="boton-negativo-solido"
+            prefWidth="150"/>
+    </VBox>
+    
+</GridPane>

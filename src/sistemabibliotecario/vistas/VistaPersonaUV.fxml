@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane 
+    id="GridPane"
+    prefHeight="720.0"
+    prefWidth="900.0"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorPersonaUV">
+    <stylesheets>
+        <URL value="@../estilos/EstiloGeneral.css"/>
+    </stylesheets>
+
+    <Label
+        text="Información Persona UV"
+        styleClass="titulo"
+        prefWidth="900"
+        alignment="BASELINE_CENTER"  
+        GridPane.rowIndex="0" />
+    
+    <StackPane
+        styleClass="body"
+        GridPane.rowIndex="1" >
+        <GridPane
+            id="InformacionPersonaUV"
+            prefWidth="900" 
+            vgap="10"
+            hgap="30">
+            <Label 
+                text="Nombre:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="0"/>
+            <StackPane
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="0"
+                alignment="BASELINE_LEFT" >
+                <Label text="Nombre de Persona UV"/>
+                <TextField
+                    text="Nombre de Persona UV"
+                    visible="false"/>
+            </StackPane>
+            
+            <Label 
+                text="Nombre:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="1"/>
+            <StackPane
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="1"
+                alignment="BASELINE_LEFT" >
+                <Label text="Nombre de Persona UV"/>
+                <TextField
+                    text="Nombre de Persona UV"
+                    visible="false"/>
+            </StackPane>
+            
+            <Label 
+                text="Nombre:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="2" />
+            <HBox
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="2"
+                spacing="20" 
+                alignment="BASELINE_LEFT" >
+                <Label text="\$0.00"/>
+                <Button 
+                    text="Generar Constancia"
+                    styleClass="boton-informativo-contorno"/>
+            </HBox>
+            
+            <HBox
+                spacing="50"
+                GridPane.columnIndex="2" >
+                <Button
+                    text="Modificar"
+                    style="-fx-font-size: 18px;"
+                    styleClass="boton-informativo-solido" />
+                <Button
+                    text="Eliminar"
+                    style="-fx-font-size: 18px;"
+                    styleClass="boton-negativo-contorno" />
+            </HBox>
+        </GridPane>
+
+    </StackPane>
+    
+    <StackPane 
+        id="TablaPrestamos"
+        GridPane.rowIndex="2">
+        <padding>
+            <Insets 
+                top="40" 
+                right="40" 
+                left="40" 
+                bottom="20" />
+        </padding>
+        <TableView 
+            editable="false">
+            <columns>
+                <TableColumn 
+                    text="Título"
+                    prefWidth="190" />
+                <TableColumn
+                    text="Autor"
+                    prefWidth="180" />
+                <TableColumn
+                    text="Fecha de Expedición"
+                    prefWidth="150" />
+                <TableColumn
+                    text="Fecha límite devolución"
+                    prefWidth="150" />
+                <TableColumn 
+                    text="Fecha de entrega"
+                    prefWidth="150" />
+            </columns>
+        </TableView>
+    </StackPane>
+    
+    <StackPane GridPane.rowIndex="3">
+        <GridPane.margin>
+            <Insets bottom="40" />
+        </GridPane.margin>
+        <Button
+            id="Atras"
+            text="Atrás"
+            styleClass="boton-negativo-solido"/>
+    </StackPane>
+    
+</GridPane>

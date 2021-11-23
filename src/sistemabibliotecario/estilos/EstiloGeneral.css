@@ -1,0 +1,113 @@
+GridPane {
+    -fx-alignment: TOP_CENTER;
+}
+
+.boton-solido {
+    -fx-background-color: #232323;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.boton-solido:hover {
+    -fx-background-color: #434343;
+}
+
+.boton-solido:pressed {
+    -fx-background-color: #030303;
+}
+
+.titulo {
+    -fx-font-weight: bold;
+    -fx-font-size: 35px;
+    -fx-padding: 50;
+}
+
+.boton-negativo-solido {
+    -fx-background-color: #f58e93;
+    -fx-font-size: 20px;
+    -fx-text-fill: #232323
+}
+
+.boton-negativo-solido:hover {
+    -fx-background-color: #ffa3a8;
+}
+
+.boton-negativo-solido:pressed {
+    -fx-background-color: #ff575f;
+}
+
+.boton-informativo-solido {
+    -fx-background-color: #8eb4f5;
+    -fx-font-size: 20px;
+    -fx-text-fill: white
+}
+
+.boton-informativo-solido:hover {
+    -fx-background-color: #a8c8ff;
+}
+
+.boton-informativo-solido:pressed {
+    -fx-background-color: #6da2fc;
+}
+
+.boton-positivo-solido {
+    -fx-background-color: #93f58e;
+    -fx-font-size: 20px;
+    -fx-text-fill: #232323
+}
+
+.boton-positivo-solido:hover {
+    -fx-background-color: #b4ffb0;
+}
+
+.boton-positivo-solido:pressed {
+    -fx-background-color: #67eb60;
+}
+
+.boton-negativo-contorno {
+    -fx-background-color: transparent;
+    -fx-border-color: #f58e93;
+    -fx-border-width: 3;
+    -fx-border-radius: 2;
+    -fx-font-size: 20px;
+    -fx-padding: 4;
+    -fx-text-fill: #232323
+}
+
+.boton-negativo-contorno:hover {
+    -fx-background-color: #ffa3a8;
+    -fx-border-color: #ffa3a8;
+    -fx-text-fill: white
+}
+
+.boton-negativo-contorno:pressed {
+    -fx-background-color: #ff575f;
+    -fx-border-color: #ff575f;
+    -fx-text-fill: white
+}
+
+.boton-informativo-contorno {
+    -fx-background-color: transparent;
+    -fx-border-color: #8eb4f5;
+    -fx-border-width: 3;
+    -fx-border-radius: 2;
+    -fx-font-size: 15px;
+    -fx-padding: 4;
+    -fx-text-fill: #232323
+}
+
+.boton-informativo-contorno:hover {
+    -fx-background-color: #a8c8ff;
+    -fx-border-color: #a8c8ff;
+    -fx-text-fill: white
+}
+
+.boton-informativo-contorno:pressed {
+    -fx-background-color: #6da2fc;
+    -fx-border-color: #6da2fc;
+    -fx-text-fill: white
+}
+
+.body {
+    -fx-font-size: 20px;
+}

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane id="GridPane" prefHeight="720.0" prefWidth="900.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorRegistrarPersonaUV">
+    <stylesheets>
+        <URL value="@../estilos/EstiloGeneral.css"/>
+    </stylesheets>
+    
+    <Label 
+        text="Registrar Persona UV"
+        styleClass="titulo"/>
+    <GridPane
+        id="FormularioRegistroPersonaUV"
+        styleClass="body"
+        GridPane.rowIndex="1" 
+        vgap="20" >
+            <Label 
+                text="Nombre:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="0" />
+            <TextField 
+                promptText="Ingrese el Nombre de la Persona UV"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="0" />
+            
+            <Label
+                text="Apellidos:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="1"/>
+            <TextField
+                promptText="Ingrese los Apellidos de la Persona UV"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="1" />
+            
+            <Label
+                text="Domicilio:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="2" />
+            <TextField
+                promptText="Ingrese el Domicilio de la Persona UV"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="2" />
+            
+            <Label
+                text="Email:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="3" />
+            <TextField
+                promptText="Ingrese el Email de la Persona UV"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="3" />
+            
+            <Label
+                text="Teléfono:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="4" />
+            <TextField
+                promptText="Ingrese el Teléfono de la Persona UV"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="4" />
+            
+            <Label 
+                text="Nombre:"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="5" />
+            <HBox
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="5"
+                spacing="50">
+                <RadioButton text="Personal" />
+                <RadioButton text="Estudiante" selected="true" />
+            </HBox>
+            
+            <StackPane
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="6"
+                alignment="CENTER_LEFT" >
+                <Label
+                    fx:id="NumeroPersonalLabel"
+                    visible="false"
+                    text="No. Personal" />
+                <Label
+                    fx:id="MatriculaLabel"
+                    text="Matrícula:" />
+            </StackPane>
+            <StackPane
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="6">
+                <TextField 
+                    fx:id="NumeroPersonalTextField"
+                    visible="false"
+                    promptText="Ingrese el No. de Personal del empleado" />
+                <TextField 
+                    fx:id="MatricculaTextField"
+                    promptText="Ingrese la Matrícula del estudiante" />
+            </StackPane>
+    </GridPane>
+    
+    <HBox 
+        spacing="50" 
+        alignment="CENTER" 
+        GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets top="50"/>
+        </GridPane.margin>
+        <Button 
+            text="Cancelar"
+            styleClass="boton-negativo-contorno"
+            prefWidth="150" />
+        <Button 
+            text="Registrar"
+            styleClass="boton-positivo-solido"
+            prefWidth="150"/>
+    </HBox>
+</GridPane>
