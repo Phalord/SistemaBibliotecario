@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="889.0" prefWidth="1121.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorPrestamoInterbibliotecario">
+   <children>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label alignment="CENTER" layoutX="-18.0" layoutY="96.0" prefHeight="69.0" prefWidth="1115.0" text="Datos del prestamo:">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="405.0" layoutY="791.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Registrar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="620.0" layoutY="791.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="129.0" text="Cancelar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutY="-1.0" prefHeight="31.0" prefWidth="539.0" style="-fx-background-color: #32CD32;" />
+      <Pane layoutX="539.0" layoutY="-1.0" prefHeight="31.0" prefWidth="582.0" style="-fx-background-color: #4169E1;" />
+      <Label layoutX="39.0" layoutY="224.0" text="Fecha de expedicion:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="655.0" layoutY="224.0" text="Fecha de vencimiento:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <DatePicker layoutX="236.0" layoutY="222.0" prefHeight="31.0" prefWidth="169.0" promptText="12/12/2021" />
+      <DatePicker layoutX="866.0" layoutY="222.0" prefHeight="31.0" prefWidth="169.0" promptText="12/01/2022" />
+      <Label alignment="CENTER" layoutX="3.0" layoutY="324.0" prefHeight="69.0" prefWidth="1115.0" text="Datos de la biblioteca a prestar:">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="421.0" text="Nombre:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="502.0" text="Direccion:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="578.0" text="Region:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="663.0" text="Telefono:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="161.0" layoutY="419.0" prefHeight="31.0" prefWidth="205.0" />
+      <TextField layoutX="161.0" layoutY="500.0" prefHeight="31.0" prefWidth="205.0" />
+      <TextField layoutX="161.0" layoutY="576.0" prefHeight="31.0" prefWidth="205.0" />
+      <TextField layoutX="161.0" layoutY="661.0" prefHeight="31.0" prefWidth="205.0" />
+   </children>
+</AnchorPane>
