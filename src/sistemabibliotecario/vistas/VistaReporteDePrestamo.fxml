@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane 
+    id="GridPane"
+    prefHeight="720.0"
+    prefWidth="900.0"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorReporteDePrestamo">
+    <stylesheets>
+        <URL value="@../estilos/EstiloGeneral.css"/>
+    </stylesheets>
+    
+    <Label
+        text="Préstamos de Recursos Documentales" 
+        styleClass="titulo"
+        prefWidth="900"
+        alignment="BASELINE_CENTER"  
+        GridPane.rowIndex="0" />
+    
+    <GridPane
+        GridPane.rowIndex="1" 
+        styleClass="body" >
+        <padding>
+            <Insets top="10"/>
+        </padding>
+        
+        <VBox spacing="20" >
+            <HBox 
+                spacing="50"
+                alignment="BASELINE_LEFT" >
+                <Label 
+                    text="Criterio de Búsqueda:" />
+                <ComboBox
+                    editable="false"
+                    promptText="Seleccione el criterio de búsqueda" >
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Préstamos Activos"/>
+                            <String fx:value="Préstamos Vencidos"/>
+                            <String fx:value="Préstamos Devueltos"/>
+                            <String fx:value="Todos los préstamos"/>
+                            <String fx:value="Fecha de Expedición"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+                
+                <Button
+                    text="Buscar"
+                    styleClass="boton-solido"
+                    prefWidth="150"/>
+            </HBox>
+
+            <VBox spacing="5" >
+                <CheckBox
+                    fx:id="expedicionFiltroCheckBox"
+                    text="Buscar por fecha de expedición" />
+                
+                <HBox 
+                    visible="false" 
+                    spacing="20" 
+                    alignment="BASELINE_LEFT" >
+                    <Label 
+                        text="Desde:" />
+                    <DatePicker
+                        fx:id="fechaDesdePicker"
+                        prefWidth="190"
+                        promptText="aaaa-mm-dd"
+                        editable="false" />
+                    <Label 
+                        text="Hasta:" />
+                    <DatePicker 
+                        fx:id="fechaHastaPicker"
+                        prefWidth="190"
+                        promptText="aaaa-mm-dd"
+                        editable="false" />
+                </HBox>
+            </VBox>
+        </VBox>
+        
+        <StackPane 
+            GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets 
+                    top="50"
+                    bottom="50" />
+            </GridPane.margin>
+            <TableView
+                editable="false" 
+                prefWidth="700" >
+                <columns>
+                    <TableColumn 
+                        text="Título" 
+                        prefWidth="300" />
+                    <TableColumn 
+                        text="Solicitante" 
+                        prefWidth="200"  />
+                    <TableColumn 
+                        text="Tipo de Recurso"
+                        prefWidth="100" />
+                    <TableColumn
+                        text="Fecha de Expedición"
+                        prefWidth="150" />
+                    <TableColumn
+                        text="Fecha de Vencimiento"
+                        prefWidth="150" />
+                    <TableColumn
+                        text="Fecha de Devolución"
+                        prefWidth="150" />
+                </columns>
+            </TableView>
+        </StackPane>
+    </GridPane>
+    
+    <StackPane 
+        alignment="BASELINE_CENTER" 
+        GridPane.rowIndex="2" >
+        <padding>
+            <Insets bottom="50" />
+        </padding>
+        
+        <Button 
+            styleClass="boton-negativo-solido"
+            text="Atrás"
+            prefWidth="200" />
+    </StackPane>
+</GridPane>

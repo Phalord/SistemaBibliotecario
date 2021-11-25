@@ -1,0 +1,11 @@
+
+
+.titulo {
+    -fx-font-style: Bold;
+    -fx-font-size: 35px;
+}
+
+.boton-negativo {
+    -fx-background-color: #f58e93;
+    -fx-text-fill: #232323
+}

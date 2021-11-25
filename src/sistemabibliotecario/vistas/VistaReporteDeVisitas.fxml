@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane 
+    id="GridPane"
+    prefHeight="720.0"
+    prefWidth="900.0"
+    styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorReporteDeVistas">
+    <stylesheets>
+        <URL value="@../estilos/EstiloGeneral.css"/>
+    </stylesheets>
+    
+        <Label
+        text="Visitas a Sala" 
+        styleClass="titulo"
+        prefWidth="900"
+        alignment="BASELINE_CENTER"  
+        GridPane.rowIndex="0" />
+    
+    <GridPane
+        GridPane.rowIndex="1" 
+        styleClass="body" >
+        <padding>
+            <Insets top="10"/>
+        </padding>
+        
+        <VBox spacing="5" >
+
+            <HBox 
+                spacing="20" 
+                alignment="BASELINE_LEFT" >
+                <Label 
+                    text="Desde:" />
+                <DatePicker
+                    fx:id="fechaDesdePicker"
+                    prefWidth="190"
+                    promptText="aaaa-mm-dd"
+                    editable="false" />
+                <Label 
+                    text="Hasta:" />
+                <DatePicker 
+                    fx:id="fechaHastaPicker"
+                    prefWidth="190"
+                    promptText="aaaa-mm-dd"
+                    editable="false" />
+                
+                <Button
+                    text="Buscar"
+                    styleClass="boton-solido"
+                    prefWidth="150"/>
+            </HBox>
+        </VBox>
+        
+        <StackPane 
+            GridPane.rowIndex="1">
+            <GridPane.margin>
+                <Insets 
+                    top="50"
+                    bottom="50" />
+            </GridPane.margin>
+            <TableView
+                editable="false" 
+                prefWidth="750" >
+                <columns>
+                    <TableColumn 
+                        text="Visitante" 
+                        prefWidth="250" />
+                    <TableColumn 
+                        text="Fecha de Visita" 
+                        prefWidth="250"  />
+                    <TableColumn 
+                        text="Razón de Visita"
+                        prefWidth="250" />
+                </columns>
+            </TableView>
+        </StackPane>
+    </GridPane>
+    
+    <StackPane 
+        alignment="BASELINE_CENTER" 
+        GridPane.rowIndex="2" >
+        <padding>
+            <Insets bottom="50" />
+        </padding>
+        
+        <Button 
+            styleClass="boton-negativo-solido"
+            text="Atrás"
+            prefWidth="200" />
+    </StackPane>
+    
+</GridPane>
