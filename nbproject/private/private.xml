@@ -3,21 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaPausarRecurso.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaSeleccionarPausar.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRellenarModificar.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaSeleccionarReactivar.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRellenarDatosDisco.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaReactivarRecurso.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaModificarRecursoDocumental.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRellenarDatosLibro.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRegistrarRecursoDocumental.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRellenarDatosMapa.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRellenarDatosPeriodico.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRellenarDatosTesis.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaEscogerEliminar.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaSeleccionarModificar.fxml</file>
-            <file>file:/D:/Dario/Desktop/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaEliminarRecursoDocumental.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaMenuPrincipal.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorRegistrarRecursoDocumental.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRegistrarRecursoDocumental.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaMenuRecursosDocumentales.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/SistemaBibliotecario.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaMenuAnaliticas.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaMenuPrestamos.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorGestionDePersonas.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorMenuRecursosDocumentales.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaGestionDePersonas.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorMenuAnaliticas.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorMenuPrestamos.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorMenuPrincipal.java</file>
         </group>
     </open-files>
 </project-private>

@@ -28,7 +28,7 @@
     </HBox>
     
     <Label
-        text="Sistema Bibliotecario"
+        text="Recursos Documentales"
         prefWidth="1280.0"
         alignment="CENTER"  
         styleClass="titulo"

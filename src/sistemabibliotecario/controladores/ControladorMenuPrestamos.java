@@ -20,7 +20,7 @@ import sistemabibliotecario.vistas.componentes.Dialogo;
 /**
  * FXML Controller class
  *
- * @author alex_
+ * @author Alejandro Sandoval Bravo.
  */
 public class ControladorMenuPrestamos implements Initializable {
 
