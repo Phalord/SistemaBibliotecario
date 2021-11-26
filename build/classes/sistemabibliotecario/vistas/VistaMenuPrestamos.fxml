@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<GridPane
+    fx:id="contenedorDeVentana"
+    prefHeight="720.0" 
+    prefWidth="1280.0"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorMenuPrestamos">
+    
+    <stylesheets>
+        <URL value="@../estilos/EstiloGeneral.css" />
+    </stylesheets>
+    
+    <HBox
+        prefHeight="20"
+        GridPane.rowIndex="0" >
+        <Pane
+            prefWidth="640" 
+            styleClass="fondo-verde"/>
+        <Pane
+            prefWidth="640" 
+            styleClass="fondo-azul"/>
+    </HBox>
+    
+    <Label
+        text="Sistema Bibliotecario"
+        prefWidth="1280.0"
+        alignment="CENTER"  
+        styleClass="titulo"
+        GridPane.rowIndex="1" />
+    <VBox 
+        alignment="CENTER"
+        prefWidth="900"
+        spacing="80"
+        GridPane.rowIndex="2">
+        <padding>
+            <Insets top="80"/>
+        </padding>
+        
+        <HBox spacing="50" alignment="CENTER">
+            <VBox spacing="35">
+                <Button 
+                    text="Registrar Prestamo"
+                    styleClass="boton-solido"
+                    onAction="#registrarPrestamo"
+                    prefWidth="400"/>
+                <Button 
+                    text="Registrar Prestamo en Sala"
+                    styleClass="boton-solido"
+                    onAction="#registrarPrestamoEnSala"
+                    prefWidth="400"/>
+                <Button 
+                    text="Registrar Prestamo Interbibliotecario"
+                    styleClass="boton-solido"
+                    onAction="#registrarPrestamoInterbibliotecario"
+                    prefWidth="400"/>
+            </VBox><VBox spacing="35">
+                <Button 
+                    text="Gestionar Prestamo"
+                    styleClass="boton-solido"
+                    onAction="#gestionarPestamo"
+                    prefWidth="400"/>
+                <Button 
+                    text="Registrar Devolucion en sala"
+                    styleClass="boton-solido"
+                    onAction="#registrarDevolucionEnSala"
+                    prefWidth="400"/>
+                <Button 
+                    text="Gestionar Prestamo Interbibliotecario"
+                    styleClass="boton-solido"
+                    onAction="#gestionarPrestamoInterbibliotecario"
+                    prefWidth="400"/>
+            </VBox>
+        </HBox>
+        
+        <Button
+            text="Atrás"
+            styleClass="boton-negativo-solido"
+            onAction="#navegarAtras" 
+            prefWidth="150"/>
+    </VBox>
+    
+</GridPane>

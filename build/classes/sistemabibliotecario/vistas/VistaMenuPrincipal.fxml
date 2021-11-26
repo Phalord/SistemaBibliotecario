@@ -10,7 +10,7 @@
     fx:id="contenedorDeVentana"
     prefHeight="720.0" 
     prefWidth="1280.0"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorMenuAnaliticas">
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorMenuPrincipal">
     
     <stylesheets>
         <URL value="@../estilos/EstiloGeneral.css" />
@@ -28,7 +28,7 @@
     </HBox>
     
     <Label
-        text="Analíticas"
+        text="Sistema Bibliotecario"
         prefWidth="1280.0"
         alignment="CENTER"  
         styleClass="titulo"
@@ -36,29 +36,40 @@
     <VBox 
         alignment="CENTER"
         prefWidth="900"
-        spacing="180"
+        spacing="50"
         GridPane.rowIndex="2">
         <padding>
-            <Insets top="130"/>
+            <Insets top="60"/>
         </padding>
         
         <VBox alignment="CENTER" spacing="35">
             <Button 
-                text="Préstamos de Recursos"
+                text="Menú de Analíticas"
                 styleClass="boton-solido"
-                onAction="#desplegarVistaReportePrestamos"
+                onAction="#desplegarMenuAnaliticas"
                 prefWidth="300"/>
             <Button 
-                text="Visitas a Sala"
+                text="Gestión de Personas UV"
                 styleClass="boton-solido"
-                onAction="#desplegarVistaReporteVisitas"
+                onAction="#desplegarMenuGestionPersonasUV"
+                prefWidth="300"/>
+            <Button 
+                text="Gestión de RR Documentales"
+                styleClass="boton-solido"
+                onAction="#desplegarMenuGestionRecursosDocumentales"
+                prefWidth="300"/>
+            <Button 
+                text="Préstamos"
+                styleClass="boton-solido"
+                onAction="#desplegarMenuPréstamos"
                 prefWidth="300"/>
         </VBox>
-        <Button 
-            text="Atrás"
+        <Button
+            text="Salir"
             styleClass="boton-negativo-solido"
-            onAction="#navegarAtras" 
+            onAction="#salir" 
             prefWidth="150"/>
     </VBox>
     
 </GridPane>
+

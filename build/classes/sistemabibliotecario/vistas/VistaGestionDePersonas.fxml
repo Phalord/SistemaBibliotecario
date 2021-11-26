@@ -61,6 +61,7 @@
         <Button 
             text="Atrás"
             styleClass="boton-negativo-solido"
+            onAction="#navegarAtras"
             prefWidth="150"/>
     </VBox>
     

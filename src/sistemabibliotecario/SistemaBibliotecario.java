@@ -21,10 +21,10 @@ public class SistemaBibliotecario extends Application {
     @Override
     public void start(Stage stage) {
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("vistas/VistaGestionDePersonas.fxml"));
+                getClass().getResource("vistas/VistaMenuPrincipal.fxml"));
         
         try {
-            Parent archivoVista = null;
+            Parent archivoVista;
             archivoVista = loader.load();
             Scene escena = new Scene(archivoVista, 1280, 720);
             stage.setScene(escena);

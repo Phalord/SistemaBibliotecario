@@ -55,5 +55,21 @@ public class ControladorMenuAnaliticas {
                     "Error", "Algo ha salido mal, por favor intente de nuevo");
         }
     }
+
+    @FXML
+    private void navegarAtras(ActionEvent event) {
+        Stage ventana = (Stage) contenedorDeVentana.getScene().getWindow();
+        FXMLLoader loader = new FXMLLoader(getClass()
+                .getResource("/sistemabibliotecario/vistas/VistaMenuPrincipal.fxml"));
+        
+        try {
+            Parent archivoDeVista;
+            archivoDeVista = loader.load();
+            ventana.setScene(new Scene(archivoDeVista, 1280, 720));
+        } catch (IOException ioException) {
+            Dialogo.mostrarDialogo(
+                    "Error", "Algo ha salido mal, por favor intente de nuevo");
+        }
+    }
     
 }

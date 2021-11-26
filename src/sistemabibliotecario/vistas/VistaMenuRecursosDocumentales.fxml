@@ -10,7 +10,7 @@
     fx:id="contenedorDeVentana"
     prefHeight="720.0" 
     prefWidth="1280.0"
-    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorMenuAnaliticas">
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorMenuRecursosDocumentales">
     
     <stylesheets>
         <URL value="@../estilos/EstiloGeneral.css" />
@@ -28,7 +28,7 @@
     </HBox>
     
     <Label
-        text="Analíticas"
+        text="Recursos Documentales"
         prefWidth="1280.0"
         alignment="CENTER"  
         styleClass="titulo"
@@ -36,25 +36,40 @@
     <VBox 
         alignment="CENTER"
         prefWidth="900"
-        spacing="180"
+        spacing="50"
         GridPane.rowIndex="2">
         <padding>
-            <Insets top="130"/>
+            <Insets top="30"/>
         </padding>
         
         <VBox alignment="CENTER" spacing="35">
             <Button 
-                text="Préstamos de Recursos"
+                text="Registrar Recurso Documental"
                 styleClass="boton-solido"
-                onAction="#desplegarVistaReportePrestamos"
-                prefWidth="300"/>
+                onAction="#registrarRecursoDocumental"
+                prefWidth="350"/>
             <Button 
-                text="Visitas a Sala"
+                text="Modificar Recurso Documental"
                 styleClass="boton-solido"
-                onAction="#desplegarVistaReporteVisitas"
-                prefWidth="300"/>
+                onAction="#modificarRecursoDocumental"
+                prefWidth="350"/>
+            <Button 
+                text="Pausar Recurso Documental"
+                styleClass="boton-solido"
+                onAction="#pausarRecursoDocumental"
+                prefWidth="350"/>
+            <Button 
+                text="Reactivar Recurso Documental"
+                styleClass="boton-solido"
+                onAction="#reactivarRecursoDocumental"
+                prefWidth="350"/>
+            <Button 
+                text="Eliminar Recurso Documental"
+                styleClass="boton-solido"
+                onAction="#eliminarRecursoDocumental"
+                prefWidth="350"/>
         </VBox>
-        <Button 
+        <Button
             text="Atrás"
             styleClass="boton-negativo-solido"
             onAction="#navegarAtras" 
