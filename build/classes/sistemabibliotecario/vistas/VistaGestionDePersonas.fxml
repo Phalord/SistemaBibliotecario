@@ -5,20 +5,64 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="sistemabibliotecario.controladores.ControladorGestionDePersonas">
+<GridPane
+    fx:id="contenedorDeVentana"
+    prefHeight="720.0" 
+    prefWidth="1280.0"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="sistemabibliotecario.controladores.ControladorGestionDePersonas">
+    
     <stylesheets>
-        <URL value="@/estilos/EstiloGeneral.css" />
+        <URL value="@../estilos/EstiloGeneral.css" />
     </stylesheets>
     
+    <HBox
+        prefHeight="20"
+        GridPane.rowIndex="0" >
+        <Pane
+            prefWidth="640" 
+            styleClass="fondo-verde"/>
+        <Pane
+            prefWidth="640" 
+            styleClass="fondo-azul"/>
+    </HBox>
     
-    <VBox alignment="CENTER" prefWidth="1280" spacing="50">
-        <Label text="Gestión de Personas UV" styleClass="titulo"/>
+    <Label
+        text="Gestión de Personas UV" 
+        styleClass="titulo"
+        prefWidth="1280.0"
+        alignment="BASELINE_CENTER" 
+        GridPane.rowIndex="1" />
+    <VBox 
+        alignment="CENTER"
+        prefWidth="900"
+        spacing="180"
+        GridPane.rowIndex="2">
+        <padding>
+            <Insets top="130"/>
+        </padding>
         <VBox alignment="CENTER" spacing="35">
-            <Button text="Buscar Persona UV" />
-            <Button text="Gestión de Personas UV" />
+            <Button 
+                text="Buscar Persona UV"
+                styleClass="boton-solido"
+                onAction="#mostrarInformacionPersona" 
+                prefWidth="300"/>
+            <Button 
+                text="Registrar Persona UV"
+                styleClass="boton-solido"
+                onAction="#mostrarVistaRegistrarPersonaUV"
+                prefWidth="300"/>
         </VBox>
-        <Button text="Atrás" styleClass="boton-negativo"/>
+        <Button 
+            text="Atrás"
+            styleClass="boton-negativo-solido"
+            onAction="#navegarAtras"
+            prefWidth="150"/>
     </VBox>
     
-</AnchorPane>
+</GridPane>

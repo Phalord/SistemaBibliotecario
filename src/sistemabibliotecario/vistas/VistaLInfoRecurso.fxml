@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorInfoRecurso">
+   <children>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label alignment="CENTER" layoutX="-18.0" layoutY="40.0" prefHeight="69.0" prefWidth="1115.0" text="Recurso Documental">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="392.0" layoutY="492.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="92.0" text="Prestar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="619.0" layoutY="492.0" mnemonicParsing="false" text="Cancelar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutY="-1.0" prefHeight="31.0" prefWidth="539.0" style="-fx-background-color: #32CD32;" />
+      <Pane layoutX="539.0" layoutY="-1.0" prefHeight="31.0" prefWidth="582.0" style="-fx-background-color: #4169E1;" />
+      <ListView editable="true" layoutX="200.0" layoutY="120.0" prefHeight="353.0" prefWidth="679.0">
+         <effect>
+            <BoxBlur />
+         </effect>
+      </ListView>
+   </children>
+</AnchorPane>

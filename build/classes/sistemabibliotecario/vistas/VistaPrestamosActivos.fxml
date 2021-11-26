@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="782.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sistemabibliotecario.controladores.ControladorPrestamosActivos">
+   <children>
+      <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label alignment="CENTER" layoutX="-18.0" layoutY="40.0" prefHeight="69.0" prefWidth="1115.0" text="Prestamos Activos">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="464.0" layoutY="506.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="193.0" text="Cancelar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Pane layoutY="-1.0" prefHeight="31.0" prefWidth="539.0" style="-fx-background-color: #32CD32;" />
+      <Pane layoutX="539.0" layoutY="-1.0" prefHeight="31.0" prefWidth="582.0" style="-fx-background-color: #4169E1;" />
+      <TreeTableView layoutX="86.0" layoutY="131.0" prefHeight="290.0" prefWidth="588.0">
+        <columns>
+          <TreeTableColumn prefWidth="296.0" text="Nombre (a quien se le presto)" />
+          <TreeTableColumn prefWidth="291.0" text="Titulo de Recurso" />
+        </columns>
+      </TreeTableView>
+      <Button layoutX="783.0" layoutY="226.0" mnemonicParsing="false" text="Registrar devolucion de prestamo" />
+      <Button layoutX="829.0" layoutY="305.0" mnemonicParsing="false" text="Prolongar prestamo" />
+   </children>
+</AnchorPane>

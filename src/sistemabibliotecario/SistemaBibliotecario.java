@@ -4,26 +4,36 @@
  */
 package sistemabibliotecario;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import sistemabibliotecario.vistas.componentes.Dialogo;
 
 /**
  *
- * @author alex_
+ * @author Alejandro Sandoval Bravo
  */
 public class SistemaBibliotecario extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+    public void start(Stage stage) {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("vistas/VistaMenuPrincipal.fxml"));
         
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.show();
+        try {
+            Parent archivoVista;
+            archivoVista = loader.load();
+            Scene escena = new Scene(archivoVista, 1280, 720);
+            stage.setScene(escena);
+            stage.setResizable(false);
+            stage.show();
+        } catch (IOException ioException) {
+            Dialogo.mostrarDialogo(
+                    "Error", "Algo ha salido mal, por favor intente de nuevo");
+        }
     }
 
     /**
