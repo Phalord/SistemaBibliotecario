@@ -166,3 +166,11 @@ CheckBox .box:pressed {
 .body {
     -fx-font-size: 20px;
 }
+
+.fondo-verde {
+    -fx-background-color:  #32CD32;
+}
+
+.fondo-azul {
+    -fx-background-color:  #4169E1;
+}

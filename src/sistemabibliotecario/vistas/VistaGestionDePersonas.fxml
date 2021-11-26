@@ -5,31 +5,44 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.geometry.Insets?>
 
-<GridPane 
-    id="GridPane"  
+<GridPane
+    fx:id="contenedorDeVentana"
     prefHeight="720.0" 
-    prefWidth="900.0"
-    xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" 
+    prefWidth="1280.0"
+    xmlns:fx="http://javafx.com/fxml/1"
     fx:controller="sistemabibliotecario.controladores.ControladorGestionDePersonas">
     
     <stylesheets>
         <URL value="@../estilos/EstiloGeneral.css" />
     </stylesheets>
     
+    <HBox
+        prefHeight="20"
+        GridPane.rowIndex="0" >
+        <Pane
+            prefWidth="640" 
+            styleClass="fondo-verde"/>
+        <Pane
+            prefWidth="640" 
+            styleClass="fondo-azul"/>
+    </HBox>
+    
     <Label
         text="Gestión de Personas UV" 
         styleClass="titulo"
-        prefWidth="900"
+        prefWidth="1280.0"
         alignment="BASELINE_CENTER" 
-        GridPane.rowIndex="0" />
+        GridPane.rowIndex="1" />
     <VBox 
         alignment="CENTER"
         prefWidth="900"
         spacing="180"
-        GridPane.rowIndex="1">
+        GridPane.rowIndex="2">
         <padding>
             <Insets top="130"/>
         </padding>
@@ -37,10 +50,12 @@
             <Button 
                 text="Buscar Persona UV"
                 styleClass="boton-solido"
+                onAction="#mostrarInformacionPersona" 
                 prefWidth="300"/>
             <Button 
-                text="Gestión de Personas UV"
+                text="Registrar Persona UV"
                 styleClass="boton-solido"
+                onAction="#mostrarVistaRegistrarPersonaUV"
                 prefWidth="300"/>
         </VBox>
         <Button 
