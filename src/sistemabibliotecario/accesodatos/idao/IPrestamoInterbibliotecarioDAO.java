@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.PrestamoInterbibliotecario;
 import sistemabibliotecario.dominio.RecursoDocumental;
@@ -13,14 +14,14 @@ import sistemabibliotecario.dominio.RecursoDocumental;
  * @author Dario Castellanos
  */
 public interface IPrestamoInterbibliotecarioDAO {
-    boolean agregarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario);
-    boolean modificarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario);
-    boolean eliminarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario);
-    PrestamoInterbibliotecario recuperarPrestamoInterbibliotecario(int id);
-    List<PrestamoInterbibliotecario> recuperarPrestamosActivos();
-    List<PrestamoInterbibliotecario> recuperarPrestamosDevueltos();
-    List<PrestamoInterbibliotecario> recuperarPrestamosAtrasados();
-    List<PrestamoInterbibliotecario> recuperarPrestamosDeRecursoActivos(RecursoDocumental recursoDocumental);
-    List<PrestamoInterbibliotecario> recuperarPrestamosDeRecursoDevueltos(RecursoDocumental recursoDocumental);
-    List<PrestamoInterbibliotecario> recuperarPrestamosDeRecursoAtrasados(RecursoDocumental recursoDocumental);
+    boolean agregarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario) throws SQLException;
+    boolean modificarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario) throws SQLException;
+    boolean eliminarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario) throws SQLException;
+    PrestamoInterbibliotecario recuperarPrestamoInterbibliotecario(int id) throws SQLException;
+    List<PrestamoInterbibliotecario> recuperarPrestamosActivos() throws SQLException;
+    List<PrestamoInterbibliotecario> recuperarPrestamosDevueltos() throws SQLException;
+    List<PrestamoInterbibliotecario> recuperarPrestamosAtrasados() throws SQLException;
+    List<PrestamoInterbibliotecario> recuperarPrestamosDeRecursoActivos(RecursoDocumental recursoDocumental) throws SQLException;
+    List<PrestamoInterbibliotecario> recuperarPrestamosDeRecursoDevueltos(RecursoDocumental recursoDocumental) throws SQLException;
+    List<PrestamoInterbibliotecario> recuperarPrestamosDeRecursoAtrasados(RecursoDocumental recursoDocumental) throws SQLException;
 }

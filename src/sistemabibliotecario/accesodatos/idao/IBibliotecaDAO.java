@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import sistemabibliotecario.dominio.Biblioteca;
 
 /**
@@ -11,7 +12,7 @@ import sistemabibliotecario.dominio.Biblioteca;
  * @author Dario Castellanos
  */
 public interface IBibliotecaDAO {
-    boolean agregarBiblioteca(Biblioteca biblioteca);
-    boolean modificarBiblioteca(Biblioteca biblioteca);
-    Biblioteca recuperarBiblioteca();
+    boolean agregarBiblioteca(Biblioteca biblioteca) throws SQLException;
+    boolean modificarBiblioteca(Biblioteca biblioteca) throws SQLException;
+    Biblioteca recuperarBiblioteca() throws SQLException;
 }

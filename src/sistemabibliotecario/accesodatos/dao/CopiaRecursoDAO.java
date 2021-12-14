@@ -37,11 +37,6 @@ public class CopiaRecursoDAO implements ICopiaRecursoDAO {
     }
 
     @Override
-    public List<CopiaRecurso> recuperarCopiasRecurso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
     public List<CopiaRecurso> recuperarCopiasRecursoDisponibles() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

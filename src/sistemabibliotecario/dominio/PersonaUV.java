@@ -11,7 +11,10 @@ import java.util.List;
  * @author Sandoval Bravo Alejandro
  */
 public class PersonaUV {
-    protected String apellidos;
+    private int clave;
+    private String identificador;
+    protected String apellidoPaterno;
+    protected String apellidoMaterno;
     protected String nombre;
     protected String email;
     protected String domicilio;
@@ -21,16 +24,18 @@ public class PersonaUV {
     
     public PersonaUV() {
         this.nombre = "";
-        this.apellidos = "";
+        this.apellidoPaterno = "";
+        this.apellidoMaterno = "";
         this.email = "";
         this.numeroTelefono = "";
         this.montoDeuda = 0.0f;
     }
     
-    public PersonaUV(String nombre, String apellidos, String email,
-            String numeroTelefono, float montoDeuda) {
+    public PersonaUV(String nombre, String apellidoMaterno, String apellidoPaterno,
+            String email, String numeroTelefono, float montoDeuda) {
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
         this.email = email;
         this.numeroTelefono = numeroTelefono;
         this.montoDeuda = montoDeuda;
@@ -52,8 +57,20 @@ public class PersonaUV {
         return deudaTotal;
     }
     
-    public void ponerApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void ponerClave(int clave) {
+        this.clave = clave;
+    }
+    
+    public void ponerIdentificador(String identificador) {
+        this.identificador = identificador;
+    }
+    
+    public void ponerApellidoMaterno(String apellido) {
+        this.apellidoMaterno = apellido;
+    }
+    
+    public void ponerApellidoPaterno(String apellido) {
+        this.apellidoPaterno = apellido;
     }
     
     public void ponerNombre(String nombre) {
@@ -80,8 +97,20 @@ public class PersonaUV {
         this.prestamosDeRecurso = prestamosDeRecurso;
     }
     
-    public String obtenerApellidos() {
-        return this.apellidos;
+    public int obtenerClave() {
+        return this.clave;
+    }
+    
+    public String obtenerIdentificador() {
+        return this.identificador;
+    }
+    
+    public String obtenerApellidoMaterno() {
+        return this.apellidoMaterno;
+    }
+    
+    public String obtenerApellidoPaterno() {
+        return this.apellidoPaterno;
     }
     
     public String obtenerNombre() {

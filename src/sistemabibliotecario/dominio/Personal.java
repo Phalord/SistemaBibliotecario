@@ -19,9 +19,9 @@ public class Personal extends PersonaUV {
         this.numeroPersonal = "";
     }
     
-    public Personal(String nombre, String apellidos, String email,
-            String numeroTelefono, float montoDeuda, String numeroPersonal) {
-        super(nombre, apellidos, email, numeroTelefono, montoDeuda);
+    public Personal(String nombre, String apellidoMaterno, String apellidoPaterno,
+            String email, String numeroTelefono, float montoDeuda) {
+        super(nombre, apellidoMaterno, apellidoPaterno, email, numeroTelefono, montoDeuda);
         this.numeroPersonal = numeroPersonal;
     }
     

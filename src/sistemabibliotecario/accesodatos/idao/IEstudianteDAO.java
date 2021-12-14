@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.Estudiante;
 
@@ -12,11 +13,11 @@ import sistemabibliotecario.dominio.Estudiante;
  * @author Dario Castellanos
  */
 public interface IEstudianteDAO {
-    boolean agregarEstudiante(Estudiante estudiante);
-    boolean modificarEstudiante(Estudiante estudiante);
-    boolean eliminarEstudiante(Estudiante estudiante);
-    Estudiante recuperarEstudiante(String matricula);
-    List<Estudiante> recuperarEstudiantes();
-    List<Estudiante> recuperarEstudiantesInscritos();
-    List<Estudiante> recuperarEstudiantesNoInscritos();
+    boolean agregarEstudiante(Estudiante estudiante) throws SQLException;
+    boolean modificarEstudiante(Estudiante estudiante) throws SQLException;
+    boolean eliminarEstudiante(Estudiante estudiante) throws SQLException;
+    Estudiante recuperarEstudiante(String matricula) throws SQLException;
+    List<Estudiante> recuperarEstudiantes() throws SQLException;
+    List<Estudiante> recuperarEstudiantesInscritos() throws SQLException;
+    List<Estudiante> recuperarEstudiantesNoInscritos() throws SQLException;
 }

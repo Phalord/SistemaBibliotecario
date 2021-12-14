@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.Disco;
 
@@ -12,12 +13,12 @@ import sistemabibliotecario.dominio.Disco;
  * @author Dario Castellanos
  */
 public interface IDiscoDAO {
-    boolean agregarDisco(Disco disco);
-    boolean modificarDisco(Disco disco);
-    boolean eliminarDisco(Disco disco);
-    Disco recuperarDisco(String codigoClasificacion);
-    List<Disco> recuperarDiscos();
-    List<Disco> recuperarDiscosPrestados();
-    List<Disco> recuperarDiscosDisponibles();
-    List<Disco> recuperarDiscosEnReparacion();
+    boolean agregarDisco(Disco disco) throws SQLException;
+    boolean modificarDisco(Disco disco) throws SQLException;
+    boolean eliminarDisco(Disco disco) throws SQLException;
+    Disco recuperarDisco(String codigoClasificacion) throws SQLException;
+    List<Disco> recuperarDiscos() throws SQLException;
+    List<Disco> recuperarDiscosPrestados() throws SQLException;
+    List<Disco> recuperarDiscosDisponibles() throws SQLException;
+    List<Disco> recuperarDiscosEnReparacion() throws SQLException;
 }
