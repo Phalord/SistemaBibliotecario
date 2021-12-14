@@ -21,16 +21,16 @@ public class PersonaUVDAO implements IPersonaUVDAO {
     @Override
     public boolean agregarPersonaUV(PersonaUV personaUV) throws SQLException {
         boolean resultado = false;
-        String consulta = "INSERT INTO `Persona UV`(clave, identificador, nombre, apellidoPaterno, apellidoMaterno, domicilio, email, telefono, montoDeuda) VALUES(?,?,?,?,?,?,?,?,?)";
+        String consulta = "INSERT INTO `PersonaUV`(identificador, nombre, apellidoPaterno, apellidoMaterno, domicilio, email, telefono, montoDeuda) VALUES(?,?,?,?,?,?,?,?)";
         try (Connection conexion = ConexionBD.abrirConexionBD();
              PreparedStatement consultaPreparada = conexion.prepareStatement(consulta)) {
-            consultaPreparada.setInt(1, personaUV.obtenerClave());
-            consultaPreparada.setString(2, personaUV.obtenerIdentificador());
-            consultaPreparada.setString(3, personaUV.obtenerNombre());
-            consultaPreparada.setString(4, personaUV.obtenerApellidoPaterno());
-            consultaPreparada.setString(5, personaUV.obtenerApellidoMaterno());
-            consultaPreparada.setString(6, personaUV.obtenerDomicilio());
-            consultaPreparada.setString(7, personaUV.obtenerEmail());
+            consultaPreparada.setString(1, personaUV.obtenerIdentificador());
+            consultaPreparada.setString(2, personaUV.obtenerNombre());
+            consultaPreparada.setString(3, personaUV.obtenerApellidoPaterno());
+            consultaPreparada.setString(4, personaUV.obtenerApellidoMaterno());
+            consultaPreparada.setString(5, personaUV.obtenerDomicilio());
+            consultaPreparada.setString(6, personaUV.obtenerEmail());
+            consultaPreparada.setString(7, personaUV.obtenerNumeroTelefono());
             consultaPreparada.setFloat(8, personaUV.obtenerMontoDeuda());
             
             int resultadFilasAfectadas = consultaPreparada.executeUpdate();

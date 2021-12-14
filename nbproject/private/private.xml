@@ -3,12 +3,35 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRegistrarPersonaUV.fxml</file>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaInicioDeSesion.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/ConexionBD.java</file>
             <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/PersonaUV.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/Estudiante.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/PersonaUVDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IRecursoDocumentalDAO.java</file>
             <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/autenticacion/CuentaUsuario.java</file>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaMenuPrestamos.fxml</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IDiscoDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/Personal.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorMenuAnaliticas.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IEstudianteDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IMapaDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IPrestamoInterbibliotecarioDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IPeriodicoDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorMenuPrincipal.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/ICopiaRecursoDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IPersonalDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/PrestamoDeRecurso.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/CopiaRecurso.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IBibliotecaDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IDVDDAO.java</file>
             <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorInicioDeSesion.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/ITesisDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/autenticacion/CuentaUsuarioDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/CopiaRecursoDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/RecursoDocumental.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/ILibroDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/RecursoDocumentalDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IPersonaUVDAO.java</file>
+            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IPrestamoDeRecursoDAO.java</file>
         </group>
     </open-files>
 </project-private>
