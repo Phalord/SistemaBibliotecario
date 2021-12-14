@@ -155,12 +155,16 @@ public class RecursoDocumental {
     public List<String> obtenerAutores() {
         return this.autores;
     }
+
+    public String obtenerCodigoDeClasificacion() {
+        return this.codigoDeClasificacion;
+    }
     
     public Date fechaDeEdicion() {
         return this.fechaDeEdicion;
     }
     
-    public String idioma() {
+    public String obtenerIdioma() {
         return this.idioma;
     }
     
@@ -174,5 +178,9 @@ public class RecursoDocumental {
     
     public String obtenerEstado() {
         return this.estado;
+    }
+
+    public int obtenerNumeroCopias() {
+        return this.copias.size();
     }
 }

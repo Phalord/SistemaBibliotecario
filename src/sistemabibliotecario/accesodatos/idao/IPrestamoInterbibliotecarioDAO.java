@@ -12,7 +12,7 @@ import sistemabibliotecario.dominio.RecursoDocumental;
  *
  * @author Dario Castellanos
  */
-public interface IPrestamoInterbibliotecario {
+public interface IPrestamoInterbibliotecarioDAO {
     boolean agregarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario);
     boolean modificarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario);
     boolean eliminarPrestamoInterbibliotecario(PrestamoInterbibliotecario prestamoInterbibliotecario);
