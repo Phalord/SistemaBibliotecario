@@ -35,14 +35,14 @@ public class ControladorMenuAnaliticas {
             archivoDeVista = loader.load();
             ventana.setScene(new Scene(archivoDeVista, 1280, 720));
         } catch (IOException ioException) {
-            Dialogo.mostrarDialogo(
+            Dialogo.mostrarDialogoError(
                     "Error", "Algo ha salido mal, por favor intente de nuevo");
         }
     }
 
     @FXML
     private void desplegarVistaReporteVisitas(ActionEvent event) {
-                Stage ventana = (Stage) contenedorDeVentana.getScene().getWindow();
+        Stage ventana = (Stage) contenedorDeVentana.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass()
                 .getResource("/sistemabibliotecario/vistas/VistaReporteDeVisitas.fxml"));
         
@@ -51,7 +51,7 @@ public class ControladorMenuAnaliticas {
             archivoDeVista = loader.load();
             ventana.setScene(new Scene(archivoDeVista, 1280, 720));
         } catch (IOException ioException) {
-            Dialogo.mostrarDialogo(
+            Dialogo.mostrarDialogoError(
                     "Error", "Algo ha salido mal, por favor intente de nuevo");
         }
     }
@@ -67,7 +67,7 @@ public class ControladorMenuAnaliticas {
             archivoDeVista = loader.load();
             ventana.setScene(new Scene(archivoDeVista, 1280, 720));
         } catch (IOException ioException) {
-            Dialogo.mostrarDialogo(
+            Dialogo.mostrarDialogoError(
                     "Error", "Algo ha salido mal, por favor intente de nuevo");
         }
     }

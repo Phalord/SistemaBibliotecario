@@ -40,10 +40,6 @@ public class PersonaUV {
         this.prestamosDeRecurso.add(prestamoDeRecuros);
     }
     
-    public List<PrestamoDeRecurso> obtenerPrestamos() {
-        return this.prestamosDeRecurso;
-    }
-    
     public void pagarDeuda(float montoPago) {
         this.montoDeuda -= montoPago;
     }
@@ -54,5 +50,61 @@ public class PersonaUV {
             deudaTotal += prestamo.calcularMontoDeuda();
         }
         return deudaTotal;
+    }
+    
+    public void ponerApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+    
+    public void ponerNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public void ponerEmail(String email) {
+        this.email = email;
+    }
+    
+    public void ponerDomicilio(String domicilio) {
+        this.domicilio = domicilio;
+    }
+    
+    public void ponerNumeroTelefono(String numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
+    }
+    
+    public void ponerMontoDeuda(float montoDeuda) {
+        this.montoDeuda = montoDeuda;
+    }
+    
+    public void ponerPrestamos(List<PrestamoDeRecurso> prestamosDeRecurso) {
+        this.prestamosDeRecurso = prestamosDeRecurso;
+    }
+    
+    public String obtenerApellidos() {
+        return this.apellidos;
+    }
+    
+    public String obtenerNombre() {
+        return this.nombre;
+    }
+    
+    public String obtenerEmail() {
+        return this.email;
+    }
+    
+    public String obtenerDomicilio() {
+        return this.domicilio;
+    }
+    
+    public String obtenerNumeroTelefono() {
+        return this.numeroTelefono;
+    }
+    
+    public float obtenerMontoDeuda() {
+        return this.montoDeuda;
+    }
+    
+    public List<PrestamoDeRecurso> obtenerPrestamos() {
+        return this.prestamosDeRecurso;
     }
 }

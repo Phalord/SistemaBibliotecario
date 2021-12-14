@@ -33,4 +33,28 @@ public class Tesis extends RecursoDocumental {
         this.numeroPaginas = numeroPaginas;
         this.dvd = dvd;
     }
+    
+    public void ponerAsesor(String asesor) {
+        this.asesor = asesor;
+    }
+    
+    public void ponerNumeroPaginas(int numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
+    }
+    
+    public void ponerDVD(DVD dvd) {
+        this.dvd = dvd;
+    }
+    
+    public String obtenerAsesor() {
+        return this.asesor;
+    }
+    
+    public int obtenerNumeroPaginas() {
+        return this.numeroPaginas;
+    }
+    
+    public DVD obtenerDVD() {
+        return this.dvd;
+    }
 }

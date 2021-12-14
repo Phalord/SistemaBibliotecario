@@ -12,6 +12,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import sistemabibliotecario.autenticacion.CuentaUsuario;
 import sistemabibliotecario.vistas.componentes.Dialogo;
 
 /**
@@ -20,9 +21,15 @@ import sistemabibliotecario.vistas.componentes.Dialogo;
  * @author Alejandro Sandoval Bravo
  */
 public class ControladorMenuPrincipal {
+    
+    private CuentaUsuario cuentaUsuario = null;
 
     @FXML
     private GridPane contenedorDeVentana;
+    
+    public void ponerCuentaUsuario(CuentaUsuario cuentaUsuario) {
+        this.cuentaUsuario = cuentaUsuario;
+    }
 
     @FXML
     private void desplegarMenuAnaliticas(ActionEvent event) {
@@ -60,7 +67,7 @@ public class ControladorMenuPrincipal {
             archivoDeVista = loader.load();
             ventana.setScene(new Scene(archivoDeVista, 1280, 720));
         } catch (IOException ioException) {
-            Dialogo.mostrarDialogo(
+            Dialogo.mostrarDialogoError(
                     "Error", "Algo ha salido mal, por favor intente de nuevo");
         }
     }
