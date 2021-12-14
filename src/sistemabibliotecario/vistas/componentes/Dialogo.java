@@ -14,7 +14,7 @@ import javafx.scene.control.ButtonType;
  */
 public abstract class Dialogo {
     
-    public static void mostrarDialogo(String titulo, String mensaje) {
+    public static void mostrarDialogoError(String titulo, String mensaje) {
         Alert alert = new Alert(AlertType.ERROR);
         alert.setTitle(titulo);
         alert.setHeaderText(null);

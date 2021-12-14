@@ -21,7 +21,7 @@ public class SistemaBibliotecario extends Application {
     @Override
     public void start(Stage stage) {
         FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("vistas/VistaMenuPrincipal.fxml"));
+                getClass().getResource("vistas/VistaInicioDeSesion.fxml"));
         
         try {
             Parent archivoVista;
@@ -31,7 +31,7 @@ public class SistemaBibliotecario extends Application {
             stage.setResizable(false);
             stage.show();
         } catch (IOException ioException) {
-            Dialogo.mostrarDialogo(
+            Dialogo.mostrarDialogoError(
                     "Error", "Algo ha salido mal, por favor intente de nuevo");
         }
     }

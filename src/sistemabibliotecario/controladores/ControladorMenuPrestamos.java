@@ -70,7 +70,7 @@ public class ControladorMenuPrestamos implements Initializable {
             archivoDeVista = loader.load();
             ventana.setScene(new Scene(archivoDeVista, 1280, 720));
         } catch (IOException ioException) {
-            Dialogo.mostrarDialogo(
+            Dialogo.mostrarDialogoError(
                     "Error", "Algo ha salido mal, por favor intente de nuevo");
         }
     }
