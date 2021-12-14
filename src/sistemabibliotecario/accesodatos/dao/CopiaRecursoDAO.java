@@ -16,7 +16,9 @@ public class CopiaRecursoDAO implements ICopiaRecursoDAO {
 
     @Override
     public boolean agregarCopiaRecurso(CopiaRecurso copiaRecurso) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        boolean resultado = false;
+        
+        return resultado;
     }
 
     @Override
