@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.PrestamoDeRecurso;
 import sistemabibliotecario.dominio.RecursoDocumental;
@@ -13,15 +14,15 @@ import sistemabibliotecario.dominio.RecursoDocumental;
  * @author Dario Castellanos
  */
 public interface IPrestamoDeRecursoDAO {
-    boolean agregarPrestamoDeRecurso(PrestamoDeRecurso prestamoDeRecurso);
-    boolean modificarPrestamoDeRecurso(PrestamoDeRecurso prestamoDeRecurso);
-    boolean eliminarPrestamoDeRecurso(PrestamoDeRecurso prestamoDeRecurso);
-    PrestamoDeRecurso recuperarPrestamoDeRecurso(int id);
-    List<PrestamoDeRecurso> recuperarPrestamos();
-    List<PrestamoDeRecurso> recuperarPrestamosActivos();
-    List<PrestamoDeRecurso> recuperarPrestamosAtrasados();
-    List<PrestamoDeRecurso> recuperarPrestamosDevueltos();
-    List<PrestamoDeRecurso> recuperarPrestamosDeRecurso(RecursoDocumental recursoDocumental);
-    List<PrestamoDeRecurso> recuperarPrestamosDeRecursoAtrasados(RecursoDocumental recursoDocumental);
-    List<PrestamoDeRecurso> recuperarPrestamosDeRecursoDevueltos(RecursoDocumental recursoDocumental);
+    boolean agregarPrestamoDeRecurso(PrestamoDeRecurso prestamoDeRecurso) throws SQLException;
+    boolean modificarPrestamoDeRecurso(PrestamoDeRecurso prestamoDeRecurso) throws SQLException;
+    boolean eliminarPrestamoDeRecurso(PrestamoDeRecurso prestamoDeRecurso) throws SQLException;
+    PrestamoDeRecurso recuperarPrestamoDeRecurso(int id) throws SQLException;
+    List<PrestamoDeRecurso> recuperarPrestamos() throws SQLException;
+    List<PrestamoDeRecurso> recuperarPrestamosActivos() throws SQLException;
+    List<PrestamoDeRecurso> recuperarPrestamosAtrasados() throws SQLException;
+    List<PrestamoDeRecurso> recuperarPrestamosDevueltos() throws SQLException;
+    List<PrestamoDeRecurso> recuperarPrestamosDeRecurso(RecursoDocumental recursoDocumental) throws SQLException;
+    List<PrestamoDeRecurso> recuperarPrestamosDeRecursoAtrasados(RecursoDocumental recursoDocumental) throws SQLException;
+    List<PrestamoDeRecurso> recuperarPrestamosDeRecursoDevueltos(RecursoDocumental recursoDocumental) throws SQLException;
 }

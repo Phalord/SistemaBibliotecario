@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.DVD;
 
@@ -12,8 +13,8 @@ import sistemabibliotecario.dominio.DVD;
  * @author Dario Castellanos
  */
 public interface IDVDDAO {
-    boolean agregarDVD(DVD dvd);
-    boolean eliminarDVD(DVD dvd);
-    DVD recuperarDVD(String codigoClasificacion);
-    List<DVD> recuperarDVDs();
+    boolean agregarDVD(DVD dvd) throws SQLException;
+    boolean eliminarDVD(DVD dvd) throws SQLException;
+    DVD recuperarDVD(String codigoClasificacion) throws SQLException;
+    List<DVD> recuperarDVDs() throws SQLException;
 }

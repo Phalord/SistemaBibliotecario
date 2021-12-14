@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.Personal;
 
@@ -12,9 +13,9 @@ import sistemabibliotecario.dominio.Personal;
  * @author Dario Castellanos
  */
 public interface IPersonalDAO {
-    boolean agregarPersonal(Personal personal);
-    boolean modificarPersonal(Personal personal);
-    boolean eliminarPersonal(Personal personal);
-    Personal recuperarPersonal(String numeroPersonal);
-    List<Personal> recuperarListaPersonal();
+    boolean agregarPersonal(Personal personal) throws SQLException;
+    boolean modificarPersonal(Personal personal) throws SQLException;
+    boolean eliminarPersonal(Personal personal) throws SQLException;
+    Personal recuperarPersonal(String numeroPersonal) throws SQLException;
+    List<Personal> recuperarListaPersonal() throws SQLException;
 }

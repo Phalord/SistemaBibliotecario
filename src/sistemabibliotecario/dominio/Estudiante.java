@@ -21,9 +21,9 @@ public class Estudiante extends PersonaUV {
         this.estado = Estudiante.NO_INSCRITO;
     }
     
-    public Estudiante(String nombre, String apellidos, String email,
-            String numeroTelefono, float montoDeuda, String matricula, String estado) {
-        super(nombre, apellidos, email, numeroTelefono, montoDeuda);
+    public Estudiante(String nombre, String apellidoMaterno, String apellidoPaterno,
+            String email, String numeroTelefono, float montoDeuda, String matricula, String estado) {
+        super(nombre, apellidoMaterno, apellidoPaterno, email, numeroTelefono, montoDeuda);
         this.matricula = matricula;
         this.estado = estado;
     }

@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.Tesis;
 
@@ -12,9 +13,9 @@ import sistemabibliotecario.dominio.Tesis;
  * @author Dario Castellanos
  */
 public interface ITesisDAO {
-    boolean agregarTesis(Tesis tesis);
-    boolean modificarTesis(Tesis tesis);
-    boolean eliminarTesis(Tesis tesis);
-    Tesis recuperarTesis(String codigoDeClasificacio);
-    List<Tesis> recuperarListaTesis();
+    boolean agregarTesis(Tesis tesis) throws SQLException;
+    boolean modificarTesis(Tesis tesis) throws SQLException;
+    boolean eliminarTesis(Tesis tesis) throws SQLException;
+    Tesis recuperarTesis(String codigoDeClasificacio) throws SQLException;
+    List<Tesis> recuperarListaTesis() throws SQLException;
 }

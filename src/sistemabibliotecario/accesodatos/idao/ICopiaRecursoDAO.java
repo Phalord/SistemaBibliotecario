@@ -4,6 +4,7 @@
  */
 package sistemabibliotecario.accesodatos.idao;
 
+import java.sql.SQLException;
 import java.util.List;
 import sistemabibliotecario.dominio.CopiaRecurso;
 
@@ -12,12 +13,11 @@ import sistemabibliotecario.dominio.CopiaRecurso;
  * @author DarioCastellanos
  */
 public interface ICopiaRecursoDAO {
-    boolean agregarCopiaRecurso(CopiaRecurso copiaRecurso);
-    boolean modificarCopiaRecurso(CopiaRecurso copiaRecurso);
-    boolean eliminarCopiaRecurso(CopiaRecurso copiaRecurso);
-    CopiaRecurso recuperarCopiaRecurso();
-    List<CopiaRecurso> recuperarCopiasRecurso();
-    List<CopiaRecurso> recuperarCopiasRecursoDisponibles();
-    List<CopiaRecurso> recuperarCopiasRecursoPrestadas();
-    List<CopiaRecurso> recuperarCopiasRecursoEnReparacion();
+    boolean agregarCopiaRecurso(CopiaRecurso copiaRecurso) throws SQLException;
+    boolean modificarCopiaRecurso(CopiaRecurso copiaRecurso) throws SQLException;
+    boolean eliminarCopiaRecurso(CopiaRecurso copiaRecurso) throws SQLException;
+    CopiaRecurso recuperarCopiaRecurso() throws SQLException;
+    List<CopiaRecurso> recuperarCopiasRecursoDisponibles() throws SQLException;
+    List<CopiaRecurso> recuperarCopiasRecursoPrestadas() throws SQLException;
+    List<CopiaRecurso> recuperarCopiasRecursoEnReparacion() throws SQLException;
 }
