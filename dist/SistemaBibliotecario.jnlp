@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="SistemaBibliotecario.jar" size="106337" download="eager" />
+    <jar href="SistemaBibliotecario.jar" size="114029" download="eager" />
     <jar href="lib\jbcrypt-0.4.jar" size="17429" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.49.jar" size="1006904" download="eager" />
   </resources>

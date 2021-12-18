@@ -13,7 +13,7 @@ import sistemabibliotecario.dominio.CopiaRecurso;
  * @author DarioCastellanos
  */
 public interface ICopiaRecursoDAO {
-    boolean agregarCopiaRecurso(CopiaRecurso copiaRecurso) throws SQLException;
+    boolean agregarCopiaRecurso(CopiaRecurso copiaRecurso, String codigoDeclasificacion) throws SQLException;
     boolean modificarCopiaRecurso(CopiaRecurso copiaRecurso) throws SQLException;
     boolean eliminarCopiaRecurso(CopiaRecurso copiaRecurso) throws SQLException;
     CopiaRecurso recuperarCopiaRecurso() throws SQLException;

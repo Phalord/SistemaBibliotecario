@@ -12,7 +12,7 @@ import java.sql.SQLException;
  *
  * @author Sandoval Bravo Alejandro
  */
-public class ConexionBD {
+public abstract class ConexionBD {
     private static final String CONTROLADOR = "com.mysql.jdbc.Driver";
     private static final String BASE_DE_DATOS = "SistemaBibliotecario";
     private static final String NOMBRE_HOST = "amigosinformaticos.ddns.net";

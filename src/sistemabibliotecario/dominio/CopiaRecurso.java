@@ -12,7 +12,8 @@ public class CopiaRecurso {
     static final String PRESTADA = "Prestada";
     static final String DISPONIBLE = "Disponible";
     static final String EN_REPARACION = "En Reparacion";
-            
+    
+    private String idCopia;
     private String estado;
     
     public CopiaRecurso() {
@@ -48,6 +49,14 @@ public class CopiaRecurso {
             colocadoEnEstante = true;
         }
         return colocadoEnEstante;
+    }
+    
+    public void ponerIdCopia(String idCopia) {
+        this.idCopia = idCopia;
+    }
+
+    public String obtenerIdCopia() {
+        return idCopia;
     }
     
     public String obtenerEstado() {

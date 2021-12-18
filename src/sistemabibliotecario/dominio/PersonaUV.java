@@ -11,7 +11,6 @@ import java.util.List;
  * @author Sandoval Bravo Alejandro
  */
 public class PersonaUV {
-    private int clave;
     private String identificador;
     protected String apellidoPaterno;
     protected String apellidoMaterno;
@@ -57,10 +56,6 @@ public class PersonaUV {
         return deudaTotal;
     }
     
-    public void ponerClave(int clave) {
-        this.clave = clave;
-    }
-    
     public void ponerIdentificador(String identificador) {
         this.identificador = identificador;
     }
@@ -95,10 +90,6 @@ public class PersonaUV {
     
     public void ponerPrestamos(List<PrestamoDeRecurso> prestamosDeRecurso) {
         this.prestamosDeRecurso = prestamosDeRecurso;
-    }
-    
-    public int obtenerClave() {
-        return this.clave;
     }
     
     public String obtenerIdentificador() {

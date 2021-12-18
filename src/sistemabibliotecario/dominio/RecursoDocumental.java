@@ -14,7 +14,6 @@ public class RecursoDocumental {
 	static final String DISPONIBLE = "Disponible";
 	static final String NO_DISPONIBLE = "No disponible";
 	
-	protected int id;
 	protected String titulo;
 	protected List<String> autores;
 	protected String codigoDeClasificacion;
@@ -116,10 +115,6 @@ public class RecursoDocumental {
 		return hayCopiasDisponibles;
 	}
 	
-	public void ponerId(int id) {
-		this.id = id;
-	}
-	
 	public void ponerTitulo(String titulo) {
 		this.titulo = titulo;
 	}
@@ -150,10 +145,6 @@ public class RecursoDocumental {
 	
 	public void ponerEstado(String estado) {
 		this.estado = estado;
-	}
-	
-	public int obtenerId() {
-		return this.id;
 	}
 	
 	public String obtenerTitulo() {
