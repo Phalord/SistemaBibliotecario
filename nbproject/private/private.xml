@@ -3,12 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaRegistrarPersonaUV.fxml</file>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaInicioDeSesion.fxml</file>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/dominio/PersonaUV.java</file>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/autenticacion/CuentaUsuario.java</file>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/vistas/VistaMenuPrestamos.fxml</file>
-            <file>file:/D:/JavaProjects/SistemaBibliotecario/src/sistemabibliotecario/controladores/ControladorInicioDeSesion.java</file>
+<<<<<<< Updated upstream
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/IDiscoDAO.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/LibroDAO.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/DvdDAO.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/dominio/Libro.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/MapaDAO.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/dominio/Periodico.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/DiscoDAO.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/dominio/CopiaRecurso.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/idao/ILibroDAO.java</file>
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/dominio/Disco.java</file>
+=======
+            <file>file:/C:/proyectos/SistemaBibliotecario/src/sistemabibliotecario/accesodatos/dao/CopiaRecursoDAO.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>

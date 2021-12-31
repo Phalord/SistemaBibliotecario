@@ -23,7 +23,7 @@ public class Disco extends RecursoDocumental {
             String codigoDeClasificacion, Date fechaDeEdicion, String idioma,
             List<CopiaRecurso> copias, List<String> temas,
             Biblioteca biblioteca, String estado, int tiempoDuracion) {
-        super(titulo, autores, codigoDeClasificacion,
+        super(titulo, autores, RecursoDocumental.DISCO, codigoDeClasificacion,
                 fechaDeEdicion, idioma, copias, temas, estado, biblioteca);
         this.tiempoDuracion = tiempoDuracion;
     }

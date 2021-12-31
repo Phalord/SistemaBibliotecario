@@ -12,7 +12,7 @@ import sistemabibliotecario.dominio.DVD;
  *
  * @author Dario Castellanos
  */
-public interface IDVDDAO {
+public interface IDvdDAO {
     boolean agregarDVD(DVD dvd) throws SQLException;
     boolean eliminarDVD(DVD dvd) throws SQLException;
     DVD recuperarDVD(String codigoClasificacion) throws SQLException;

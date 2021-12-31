@@ -11,8 +11,12 @@ import java.util.List;
  * @author Sandoval Bravo Alejandro
  */
 public class PersonaUV {
+    public static final String PERSONAL = "Personal";
+    public static final String ESTUDIANTE = "Estudiante";
+    
     private int clave;
     private String identificador;
+    private String tipo;
     protected String apellidoPaterno;
     protected String apellidoMaterno;
     protected String nombre;
@@ -29,16 +33,18 @@ public class PersonaUV {
         this.email = "";
         this.numeroTelefono = "";
         this.montoDeuda = 0.0f;
+        this.tipo = "";
     }
     
     public PersonaUV(String nombre, String apellidoMaterno, String apellidoPaterno,
-            String email, String numeroTelefono, float montoDeuda) {
+            String email, String numeroTelefono, float montoDeuda, String tipo) {
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
         this.email = email;
         this.numeroTelefono = numeroTelefono;
         this.montoDeuda = montoDeuda;
+        this.tipo = tipo;
     }
     
     public void asignarPrestamo(PrestamoDeRecurso prestamoDeRecuros) {
@@ -59,6 +65,10 @@ public class PersonaUV {
     
     public void ponerClave(int clave) {
         this.clave = clave;
+    }
+    
+    public void ponerTipo(String tipo) {
+        this.tipo = tipo;
     }
     
     public void ponerIdentificador(String identificador) {
@@ -99,6 +109,10 @@ public class PersonaUV {
     
     public int obtenerClave() {
         return this.clave;
+    }
+    
+    public String obtenerTipo() {
+        return this.tipo;
     }
     
     public String obtenerIdentificador() {

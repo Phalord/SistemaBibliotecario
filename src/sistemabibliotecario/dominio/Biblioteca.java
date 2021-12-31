@@ -11,6 +11,7 @@ import java.util.List;
  * @author Sandoval Bravo Alejandro
  */
 public class Biblioteca {
+    private int id;
     private String direccion;
     private String nombre;
     private String region;
@@ -19,6 +20,17 @@ public class Biblioteca {
     private List<RecursoDocumental> recursosDocumentales;
     private List<PrestamoDeRecurso> prestamosDeRecursos;
     private List<PrestamoInterbibliotecario> prestamosInterbibliotecarios;
+    
+    public Biblioteca() {
+        this.direccion = "";
+        this.nombre = "";
+        this.region = "";
+        this.telefono = "";
+        this.visitasSala = null;
+        this.recursosDocumentales = null;
+        this.prestamosDeRecursos = null;
+        this.prestamosInterbibliotecarios = null;
+    }
     
     public Biblioteca(String direccion, String nombre, String region,
             String telefono, List<VisitaSala> visitasSala,
@@ -52,19 +64,23 @@ public class Biblioteca {
         this.telefono = biblioteca.telefono;
     }
     
-    public void obtenerDireccion(String direccion) {
+    public void ponerID(int id) {
+        this.id = id;
+    }
+    
+    public void ponerDireccion(String direccion) {
         this.direccion = direccion;
     }
     
-    public void obtenerNombre(String nombre) {
+    public void ponerNombre(String nombre) {
         this.nombre = nombre;
     }
     
-    public void obtenerRegion(String region) {
+    public void ponerRegion(String region) {
         this.region = region;
     }
     
-    public void obtenerTelefono(String telefono) {
+    public void ponerTelefono(String telefono) {
         this.telefono = telefono;
     }
     
@@ -85,6 +101,10 @@ public class Biblioteca {
     public void ponerPrestamosInterbibliotecarios(
             List<PrestamoInterbibliotecario> prestamosInterbibliotecarios) {
         this.prestamosInterbibliotecarios = prestamosInterbibliotecarios;
+    }
+    
+    public int obtenerID() {
+        return this.id;
     }
     
     public String obtenerDireccion() {

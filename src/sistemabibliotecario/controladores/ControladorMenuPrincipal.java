@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import sistemabibliotecario.autenticacion.CuentaUsuario;
@@ -22,13 +23,28 @@ import sistemabibliotecario.vistas.componentes.Dialogo;
  */
 public class ControladorMenuPrincipal {
     
-    private CuentaUsuario cuentaUsuario = null;
+    private static CuentaUsuario cuentaUsuario = null;
 
     @FXML
     private GridPane contenedorDeVentana;
+    @FXML
+    private Button btnMenuAnaliticas;
+    @FXML
+    private Button btnPrestamos;
     
     public void ponerCuentaUsuario(CuentaUsuario cuentaUsuario) {
-        this.cuentaUsuario = cuentaUsuario;
+        ControladorMenuPrincipal.cuentaUsuario = cuentaUsuario;
+        if (ControladorMenuPrincipal.cuentaUsuario.obtenerTipo()
+                .equals(CuentaUsuario.BIBLIOTECARIO)) {
+            this.btnMenuAnaliticas.setDisable(true);
+        } else if (ControladorMenuPrincipal.cuentaUsuario.obtenerTipo()
+                .equals(CuentaUsuario.SECRETARIA)) {
+            this.btnPrestamos.setDisable(true);
+        }
+    }
+    
+    public static CuentaUsuario obtenerCuentaUsuario() {
+        return ControladorMenuPrincipal.cuentaUsuario;
     }
 
     @FXML

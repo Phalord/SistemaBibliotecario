@@ -4,9 +4,6 @@
  */
 package sistemabibliotecario.dominio;
 
-import java.sql.Date;
-import java.util.List;
-
 /**
  *
  * @author Sandoval Bravo Alejandro
@@ -19,14 +16,16 @@ public class Personal extends PersonaUV {
         this.numeroPersonal = "";
     }
     
-    public Personal(String nombre, String apellidoMaterno, String apellidoPaterno,
+    public Personal(String numeroPersonal, String nombre, String apellidoMaterno, String apellidoPaterno,
             String email, String numeroTelefono, float montoDeuda) {
-        super(nombre, apellidoMaterno, apellidoPaterno, email, numeroTelefono, montoDeuda);
+        super(nombre, apellidoMaterno, apellidoPaterno,
+                email, numeroTelefono, montoDeuda, PersonaUV.PERSONAL);
         this.numeroPersonal = numeroPersonal;
     }
     
     public void ponerNumeroPersonal(String numeroPersonal) {
         this.numeroPersonal = numeroPersonal;
+        super.ponerIdentificador(numeroPersonal);
     }
     
     public String obtenerNumeroPersonal() {

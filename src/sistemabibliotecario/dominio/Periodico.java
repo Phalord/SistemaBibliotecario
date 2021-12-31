@@ -25,7 +25,7 @@ public class Periodico extends RecursoDocumental {
             Date fechaDeEdicion, String idioma, List<CopiaRecurso> copias,
             List<String> temas, String estado, Biblioteca biblioteca,
             String editorial, String notaPrincipal) {
-        super(titulo, autores, codigoDeClasificacion,
+        super(titulo, autores, RecursoDocumental.PERIODICO, codigoDeClasificacion,
                 fechaDeEdicion, idioma, copias, temas, estado, biblioteca);
         this.editorial = editorial;
         this.notaPrincipal = notaPrincipal;

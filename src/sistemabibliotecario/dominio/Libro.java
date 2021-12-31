@@ -30,7 +30,7 @@ public class Libro extends RecursoDocumental {
             Date fechaDeEdicion, String idioma, List<CopiaRecurso> copias,
             List<String> temas, String estado, String clasificacionLC,
             Biblioteca biblioteca, String editorial, String isbn, int numeroPaginas) {
-        super(titulo, autores, codigoDeClasificacion,
+        super(titulo, autores, RecursoDocumental.LIBRO, codigoDeClasificacion,
                 fechaDeEdicion, idioma, copias, temas, estado, biblioteca);
         this.clasificacionLC = clasificacionLC;
         this.editorial = editorial;
@@ -62,11 +62,11 @@ public class Libro extends RecursoDocumental {
         return this.editorial;
     }
     
-    public String obtenerisbn() {
+    public String obtenerISBN() {
         return this.isbn;
     }
     
-    public int obtenerNoPaginas() {
+    public int obtenerNumeroPaginas() {
         return this.numeroPaginas;
     }
     

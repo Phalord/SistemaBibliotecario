@@ -41,6 +41,8 @@ public class ControladorInicioDeSesion implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -57,18 +59,17 @@ public class ControladorInicioDeSesion implements Initializable {
         
         try {
             usuario = cuentaUsuarioDAO.recuperarCuentaUsuario(nombreUsuario);
-        } catch(SQLException excepcion) {
-            Dialogo.mostrarDialogoError("Error de conexion", "Error al comunicarse con la base de datos");
-        }
-        
-        if (usuario != null) {
-            if (BCrypt.checkpw(contrasena, usuario.obtenerContrasena())) {
-                desplegarMenuPrincipal(usuario);
+            if (usuario != null) {
+                if (BCrypt.checkpw(contrasena, usuario.obtenerContrasena())) {
+                    desplegarMenuPrincipal(usuario);
+                } else {
+                    mostrarCredencialesIncorrectas();
+                }
             } else {
                 mostrarCredencialesIncorrectas();
             }
-        } else {
-            mostrarCredencialesIncorrectas();
+        } catch(SQLException excepcion) {
+            Dialogo.mostrarDialogoError("Error de conexion", "Error al comunicarse con la base de datos");
         }
         
     }

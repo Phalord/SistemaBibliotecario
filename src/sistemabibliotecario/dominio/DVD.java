@@ -13,20 +13,20 @@ import java.util.List;
  */
 public class DVD extends RecursoDocumental {
     private int tiempoDuracion;
-    private char region;
+    private int region;
     
     public DVD() {
         super();
         this.tiempoDuracion = -1;
-        this.region = 'x';
+        this.region = -1;
     }
     
     public DVD(String titulo, List<String> autores, String codigoDeClasificacion,
             Date fechaDeEdicion, String idioma, List<CopiaRecurso> copias,
             List<String> temas, String estado, Biblioteca biblioteca,
-            int tiempoDuracion, char region) {
-        super(titulo, autores, codigoDeClasificacion, fechaDeEdicion, idioma,
-                copias, temas, estado, biblioteca);
+            int tiempoDuracion, int region) {
+        super(titulo, autores, RecursoDocumental.DVD, codigoDeClasificacion,
+                fechaDeEdicion, idioma, copias, temas, estado, biblioteca);
         this.tiempoDuracion = tiempoDuracion;
         this.region = region;
     }
@@ -35,7 +35,7 @@ public class DVD extends RecursoDocumental {
         this.tiempoDuracion = tiempoDuracion;
     }
     
-    public void ponerRegion(char region) {
+    public void ponerRegion(int region) {
         this.region = region;
     }
     
@@ -43,7 +43,7 @@ public class DVD extends RecursoDocumental {
         return tiempoDuracion;
     }
     
-    public char obtenerRegion() {
+    public int obtenerRegion() {
         return region;
     }
 }

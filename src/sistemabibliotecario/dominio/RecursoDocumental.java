@@ -11,10 +11,18 @@ import java.util.List;
  * @author Sandoval Bravo Alejandro
  */
 public class RecursoDocumental {
-	static final String DISPONIBLE = "Disponible";
-	static final String NO_DISPONIBLE = "No disponible";
+	public static final String DISPONIBLE = "Disponible";
+	public static final String NO_DISPONIBLE = "No disponible";
+        public static final String DISCO = "Disco";
+        public static final String MAPA = "Mapa";
+        public static final String LIBRO = "Libro";
+        public static final String DVD = "DVD";
+        public static final String TESIS = "Tesis";
+        public static final String PERIODICO = "Periodico";
+        
 	
-	protected int id;
+	private int id;
+        private String tipoDeRecurso;
 	protected String titulo;
 	protected List<String> autores;
 	protected String codigoDeClasificacion;
@@ -26,46 +34,49 @@ public class RecursoDocumental {
 	protected Biblioteca biblioteca;
 	
 	public RecursoDocumental() {
-		this.titulo = "";
-		this.autores = null;
-		this.codigoDeClasificacion = "";
-		this.fechaDeEdicion = null;
-		this.idioma = "";
-		this.copias = null;
-		this.temas = null;
-		this.estado = RecursoDocumental.NO_DISPONIBLE;
+            this.titulo = "";
+            this.tipoDeRecurso = "";
+            this.autores = null;
+            this.codigoDeClasificacion = "";
+            this.fechaDeEdicion = null;
+            this.idioma = "";
+            this.copias = null;
+            this.temas = null;
+            this.estado = RecursoDocumental.NO_DISPONIBLE;
 	}
 	
 	public RecursoDocumental(String titulo, List<String> autores,
-	                         String codigoDeClasificacion, Date fechaDeEdicion, String idioma,
-	                         List<CopiaRecurso> copias, List<String> temas, String estado, Biblioteca biblioteca) {
-		this.titulo = titulo;
-		this.autores = autores;
-		this.codigoDeClasificacion = codigoDeClasificacion;
-		this.fechaDeEdicion = fechaDeEdicion;
-		this.idioma = idioma;
-		this.copias = copias;
-		this.temas = temas;
-		this.estado = estado;
-		this.biblioteca = biblioteca;
+                String tipoDeRecurso, String codigoDeClasificacion,
+                Date fechaDeEdicion, String idioma, List<CopiaRecurso> copias,
+                List<String> temas, String estado, Biblioteca biblioteca) {
+            this.titulo = titulo;
+            this.tipoDeRecurso = tipoDeRecurso;
+            this.autores = autores;
+            this.codigoDeClasificacion = codigoDeClasificacion;
+            this.fechaDeEdicion = fechaDeEdicion;
+            this.idioma = idioma;
+            this.copias = copias;
+            this.temas = temas;
+            this.estado = estado;
+            this.biblioteca = biblioteca;
 	}
 	
 	public void prestarCopia(int indice) {
-		if (hayCopiasDisponibles()) {
-			copias.get(indice).prestar();
-			if (!hayCopiasDisponibles()) {
-				estado = RecursoDocumental.NO_DISPONIBLE;
-			}
-		}
+            if (hayCopiasDisponibles()) {
+                copias.get(indice).prestar();
+                if (!hayCopiasDisponibles()) {
+                        estado = RecursoDocumental.NO_DISPONIBLE;
+                }
+            }
 	}
 	
 	public void repararCopia(int indice) {
-		if (hayCopiasDisponibles()) {
-			copias.get(indice).ingresarReparacion();
-			if (!hayCopiasDisponibles()) {
-				estado = RecursoDocumental.NO_DISPONIBLE;
-			}
-		}
+            if (hayCopiasDisponibles()) {
+                copias.get(indice).ingresarReparacion();
+                if (!hayCopiasDisponibles()) {
+                        estado = RecursoDocumental.NO_DISPONIBLE;
+                }
+            }
 	}
 	
 	public void agregarCopia() {
@@ -95,107 +106,115 @@ public class RecursoDocumental {
 	}
 	
 	private boolean recursoDocumentalEsIgual(RecursoDocumental recursoModificado) {
-		return (this.titulo.equals(recursoModificado.titulo) &&
-			this.autores.equals(recursoModificado.autores) &&
-			this.codigoDeClasificacion.equals(
-				recursoModificado.codigoDeClasificacion) &&
-			this.fechaDeEdicion.equals(recursoModificado.fechaDeEdicion) &&
-			this.idioma.equals(recursoModificado.idioma) &&
-			this.copias.equals(recursoModificado.copias) &&
-			this.temas.equals(recursoModificado.temas));
+            return (this.titulo.equals(recursoModificado.titulo) &&
+                this.autores.equals(recursoModificado.autores) &&
+                this.codigoDeClasificacion.equals(
+                        recursoModificado.codigoDeClasificacion) &&
+                this.fechaDeEdicion.equals(recursoModificado.fechaDeEdicion) &&
+                this.idioma.equals(recursoModificado.idioma) &&
+                this.copias.equals(recursoModificado.copias) &&
+                this.temas.equals(recursoModificado.temas));
 	}
 	
 	public boolean hayCopiasDisponibles() {
-		boolean hayCopiasDisponibles = false;
-		for (CopiaRecurso copia: copias) {
-			if (copia.obtenerEstado().equals(CopiaRecurso.DISPONIBLE)) {
-				hayCopiasDisponibles = true;
-				break;
-			}
-		}
-		return hayCopiasDisponibles;
+            boolean hayCopiasDisponibles = false;
+            for (CopiaRecurso copia: copias) {
+                if (copia.obtenerEstado().equals(CopiaRecurso.DISPONIBLE)) {
+                    hayCopiasDisponibles = true;
+                    break;
+                }
+            }
+            return hayCopiasDisponibles;
 	}
 	
 	public void ponerId(int id) {
-		this.id = id;
+            this.id = id;
 	}
+        
+        public void ponerTipoDeRecurso(String tipoDeRecurso) {
+            this.tipoDeRecurso = tipoDeRecurso;
+        }
 	
 	public void ponerTitulo(String titulo) {
-		this.titulo = titulo;
+            this.titulo = titulo;
 	}
 	
 	public void ponerAutores(List<String> autores) {
-		this.autores = autores;
+            this.autores = autores;
 	}
 	
 	public void ponerCodigoDeClasificacion(String codigoDeClasificacion) {
-		this.codigoDeClasificacion = codigoDeClasificacion;
+            this.codigoDeClasificacion = codigoDeClasificacion;
 	}
 	
 	public void ponerFechaDeEdicion(Date fechaDeEdicion) {
-		this.fechaDeEdicion = fechaDeEdicion;
+            this.fechaDeEdicion = fechaDeEdicion;
 	}
 	
 	public void ponerIdioma(String idioma) {
-		this.idioma = idioma;
+            this.idioma = idioma;
 	}
 	
 	public void ponerCopias(List<CopiaRecurso> copias) {
-		this.copias = copias;
+            this.copias = copias;
 	}
 	
 	public void ponerTemas(List<String> temas) {
-		this.temas = temas;
+            this.temas = temas;
 	}
 	
 	public void ponerEstado(String estado) {
-		this.estado = estado;
+            this.estado = estado;
 	}
 	
 	public int obtenerId() {
-		return this.id;
+            return this.id;
 	}
+        
+        public String obtenerTipoDeRecurso() {
+            return this.tipoDeRecurso;
+        }
 	
 	public String obtenerTitulo() {
-		return this.titulo;
+            return this.titulo;
 	}
 	
 	public List<String> obtenerAutores() {
-		return this.autores;
+            return this.autores;
 	}
 	
 	public String obtenerCodigoDeClasificacion() {
-		return this.codigoDeClasificacion;
+            return this.codigoDeClasificacion;
 	}
 	
 	public Date fechaDeEdicion() {
-		return this.fechaDeEdicion;
+            return this.fechaDeEdicion;
 	}
 	
 	public String obtenerIdioma() {
-		return this.idioma;
+            return this.idioma;
 	}
 	
 	public List<CopiaRecurso> obtenerCopias() {
-		return this.copias;
+            return this.copias;
 	}
 	
 	public List<String> obtenerTemas() {
-		return this.temas;
+            return this.temas;
 	}
 	
 	public String obtenerEstado() {
-		return this.estado;
+            return this.estado;
 	}
 	
 	public int obtenerNumeroCopias() {
-		return this.copias.size();
+            return this.copias.size();
 	}
 	
 	public void ponerNumeroCopias(int numeroCopias) {
-		for (int i = 0; i < numeroCopias; i++) {
-			this.agregarCopia();
-		}
+            for (int i = 0; i < numeroCopias; i++) {
+                this.agregarCopia();
+            }
 	}
 	
 }

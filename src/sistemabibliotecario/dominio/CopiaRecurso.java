@@ -9,18 +9,22 @@ package sistemabibliotecario.dominio;
  * @author Sandoval Bravo Alejandro
  */
 public class CopiaRecurso {
-    static final String PRESTADA = "Prestada";
-    static final String DISPONIBLE = "Disponible";
-    static final String EN_REPARACION = "En Reparacion";
+    public static final String PRESTADA = "Prestada";
+    public static final String DISPONIBLE = "Disponible";
+    public static final String EN_REPARACION = "En Reparacion";
             
+    private String idCopia;
     private String estado;
+    private String codigoDeClasificacion;
     
     public CopiaRecurso() {
         this.estado = CopiaRecurso.DISPONIBLE;
+        this.codigoDeClasificacion = "";
     }
     
-    public CopiaRecurso(String estado) {
+    public CopiaRecurso(String estado, String codigoDeClasificacion) {
         this.estado = estado;
+        this.codigoDeClasificacion = codigoDeClasificacion;
     }
     
     public boolean prestar() {
@@ -50,7 +54,27 @@ public class CopiaRecurso {
         return colocadoEnEstante;
     }
     
+    public void ponerIdCopia(String idCopia) {
+        this.idCopia = idCopia;
+    }
+    
+    public void ponerEstado(String estado) {
+        this.estado = estado;
+    }
+    
+    public void ponerCodigoDeClasificacion(String codigoDeClasificacion) {
+        this.codigoDeClasificacion = codigoDeClasificacion;
+    }
+    
+    public String obtenerIdCopia() {
+        return this.idCopia;
+    }
+    
     public String obtenerEstado() {
         return estado;
+    }
+    
+    public String obtenerCodigoDeClasificacion() {
+        return this.codigoDeClasificacion;
     }
 }

@@ -20,5 +20,5 @@ public interface ILibroDAO {
     List<Libro> recuperarLibros() throws SQLException;
     List<Libro> recuperarLibrosPrestados() throws SQLException;
     List<Libro> recuperarLibrosDisponibles() throws SQLException;
-    List<Libro> recuperarLibrosEnReparacion() throws SQLException;
+    List<Libro> recuperarLibrosNoDisponibles() throws SQLException;
 }

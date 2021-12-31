@@ -20,5 +20,5 @@ public interface IDiscoDAO {
     List<Disco> recuperarDiscos() throws SQLException;
     List<Disco> recuperarDiscosPrestados() throws SQLException;
     List<Disco> recuperarDiscosDisponibles() throws SQLException;
-    List<Disco> recuperarDiscosEnReparacion() throws SQLException;
+    List<Disco> recuperarDiscosNoDisponibles() throws SQLException;
 }

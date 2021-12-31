@@ -18,9 +18,9 @@ public class CuentaUsuarioDAO implements ICuentaUsuarioDAO {
     @Override
     public CuentaUsuario recuperarCuentaUsuario(String nombreUsuario) throws SQLException {
         CuentaUsuario cuentaUsuario = null;
-        String consulta = "SELECT * FROM `Cuentas Usuario` WHERE nombreUsuario = ?";
+        String consulta = "SELECT * FROM `CuentasUsuario` WHERE nombreUsuario = ?;";
         try (Connection conexion = ConexionBD.abrirConexionBD();
-             PreparedStatement consultaPreparada = conexion.prepareStatement(consulta)) {
+            PreparedStatement consultaPreparada = conexion.prepareStatement(consulta)) {
             consultaPreparada.setString(1, nombreUsuario);
             try (ResultSet resultado = consultaPreparada.executeQuery()) {
                 while(resultado.next()) {

@@ -23,13 +23,15 @@ public class Estudiante extends PersonaUV {
     
     public Estudiante(String nombre, String apellidoMaterno, String apellidoPaterno,
             String email, String numeroTelefono, float montoDeuda, String matricula, String estado) {
-        super(nombre, apellidoMaterno, apellidoPaterno, email, numeroTelefono, montoDeuda);
+        super(nombre, apellidoMaterno, apellidoPaterno, email,
+                numeroTelefono, montoDeuda, PersonaUV.ESTUDIANTE);
         this.matricula = matricula;
         this.estado = estado;
     }
     
     public void ponerMatricula(String matricula) {
         this.matricula = matricula;
+        super.ponerIdentificador(matricula);
     }
     
     public void ponerEstado(String estado) {

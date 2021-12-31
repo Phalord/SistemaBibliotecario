@@ -25,7 +25,7 @@ public class Mapa extends RecursoDocumental {
             Date fechaDeEdicion, String idioma, List<CopiaRecurso> copias,
             List<String> temas, String estado, Biblioteca biblioteca,
             String escala, String tipoProyeccion) {
-        super(titulo, autores, codigoDeClasificacion,
+        super(titulo, autores, RecursoDocumental.MAPA, codigoDeClasificacion,
                 fechaDeEdicion, idioma, copias, temas, estado, biblioteca);
     }
     

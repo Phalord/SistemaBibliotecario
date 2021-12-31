@@ -44,21 +44,23 @@
         
         <VBox alignment="CENTER" spacing="35">
             <Button 
+                fx:id="btnMenuAnaliticas"
                 text="Menú de Analíticas"
                 styleClass="boton-solido"
                 onAction="#desplegarMenuAnaliticas"
                 prefWidth="300"/>
-            <Button 
+            <Button
                 text="Gestión de Personas UV"
                 styleClass="boton-solido"
                 onAction="#desplegarMenuGestionPersonasUV"
                 prefWidth="300"/>
-            <Button 
+            <Button
                 text="Gestión de RR Documentales"
                 styleClass="boton-solido"
                 onAction="#desplegarMenuGestionRecursosDocumentales"
                 prefWidth="300"/>
             <Button 
+                fx:id="btnPrestamos"
                 text="Préstamos"
                 styleClass="boton-solido"
                 onAction="#desplegarMenuPréstamos"

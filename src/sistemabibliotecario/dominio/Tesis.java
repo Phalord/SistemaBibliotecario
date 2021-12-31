@@ -27,8 +27,8 @@ public class Tesis extends RecursoDocumental {
             String codigoDeClasificacion, Date fechaDeEdicion, String idioma,
             List<CopiaRecurso> copias, List<String> temas, String estado,
             Biblioteca biblioteca, String asesor, int numeroPaginas, DVD dvd) {
-        super(titulo, autores, codigoDeClasificacion, fechaDeEdicion,
-                idioma, copias, temas, estado, biblioteca);
+        super(titulo, autores, RecursoDocumental.TESIS, codigoDeClasificacion,
+                fechaDeEdicion, idioma, copias, temas, estado, biblioteca);
         this.asesor = asesor;
         this.numeroPaginas = numeroPaginas;
         this.dvd = dvd;

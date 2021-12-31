@@ -14,5 +14,5 @@ import sistemabibliotecario.dominio.Biblioteca;
 public interface IBibliotecaDAO {
     boolean agregarBiblioteca(Biblioteca biblioteca) throws SQLException;
     boolean modificarBiblioteca(Biblioteca biblioteca) throws SQLException;
-    Biblioteca recuperarBiblioteca() throws SQLException;
+    Biblioteca recuperarBiblioteca(int idBiblioteca) throws SQLException;
 }

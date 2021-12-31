@@ -26,7 +26,8 @@ public class ConexionBD {
         Connection conexion = null;
         try {
             Class.forName(CONTROLADOR);
-            conexion = DriverManager.getConnection(URL, NOMBRE_USUARIO, CONTRASENA);
+            conexion = DriverManager
+                    .getConnection(URL, NOMBRE_USUARIO, CONTRASENA);
         } catch (ClassNotFoundException | SQLException exception) {
             System.out.println(exception.getMessage());
         }
