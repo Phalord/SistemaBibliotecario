@@ -20,5 +20,5 @@ public interface IPeriodicoDAO {
     List<Periodico> recuperarPeriodicos() throws SQLException;
     List<Periodico> recuperarPeriodicosPrestados() throws SQLException;
     List<Periodico> recuperarPeriodicosDisponibles() throws SQLException;
-    List<Periodico> recuperarPeriodicosEnReparacion() throws SQLException;
+    List<Periodico> recuperarPeriodicosNoDisponibles() throws SQLException;
 }

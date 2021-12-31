@@ -19,6 +19,6 @@ public interface IMapaDAO {
     Mapa recuperarMapa(String codigoClasificacion) throws SQLException;
     List<Mapa> recuperarMapas() throws SQLException;
     List<Mapa> recuperarMapasDisponibles() throws SQLException;
-    List<Mapa> recuperarMapasEnReparacion() throws SQLException;
+    List<Mapa> recuperarMapasNoDisponibles() throws SQLException;
     List<Mapa> recuperarMapasPrestados() throws SQLException;
 }

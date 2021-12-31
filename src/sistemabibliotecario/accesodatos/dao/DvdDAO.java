@@ -66,7 +66,7 @@ public class DvdDAO implements IDvdDAO {
     @Override
     public DVD recuperarDVD(String codigoClasificacion) throws SQLException {
         DVD dvd = null;
-        String consulta = "SELECT * FROM `DVD` INNER JOIN `RecursoDocumental` ON `DVD`.`codigoDeClasificacion` = `RecursoDocumental`.`codigoDeClasificacion` AND codigoDeClasificacion = ?;";
+        String consulta = "SELECT * FROM `DVD` INNER JOIN `RecursoDocumental` ON `DVD`.`codigoDeClasificacion` = `RecursoDocumental`.`codigoDeClasificacion` AND `DVD`.`codigoDeClasificacion` = ?;";
         try (PreparedStatement consultaPreparada =
                 ConexionBD.abrirConexionBD().prepareStatement(consulta)) {
             consultaPreparada.setString(1, codigoClasificacion);

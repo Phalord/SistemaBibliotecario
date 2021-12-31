@@ -200,7 +200,7 @@ public class LibroDAO implements ILibroDAO {
 
     @Override
     public List<Libro> recuperarLibrosDisponibles() throws SQLException {
-        List<Libro> libros = new ArrayList<>();
+        List<Libro> librosDisponibles = new ArrayList<>();
         String consulta = "SELECT * FROM `Libro` INNER JOIN `RecursoDocumental` ON `Libro`.`codigoDeClasificacion` = `RecursoDocumental`.`codigoDeClasificacion` INNER JOIN `PrestamoDeRecurso` ON `PrestamoDeRecurso`.`codigoDeClasificacion` = `Libro`.`codigoDeClasificacion` AND `RecursoDocumental`.`estado` = ?;";
         try (PreparedStatement consultaPreparada =
                 ConexionBD.abrirConexionBD().prepareStatement(consulta)) {
@@ -228,16 +228,16 @@ public class LibroDAO implements ILibroDAO {
                 libro.ponerEditorial(resultado.getString("Editorial"));
                 libro.ponerClasificacionLC(resultado.getString("clasificacionLC"));
                 libro.ponerNumeroPaginas(resultado.getInt("numeroPaginas"));
-                libros.add(libro);
+                librosDisponibles.add(libro);
             }
         }
         
-        return libros;
+        return librosDisponibles;
     }
 
     @Override
     public List<Libro> recuperarLibrosNoDisponibles() throws SQLException {
-        List<Libro> libros = new ArrayList<>();
+        List<Libro> librosNoDisponibles = new ArrayList<>();
         String consulta = "SELECT * FROM `Libro` INNER JOIN `RecursoDocumental` ON `Libro`.`codigoDeClasificacion` = `RecursoDocumental`.`codigoDeClasificacion` INNER JOIN `PrestamoDeRecurso` ON `PrestamoDeRecurso`.`codigoDeClasificacion` = `Libro`.`codigoDeClasificacion` AND `RecursoDocumental`.`estado` = ?;";
         try (PreparedStatement consultaPreparada =
                 ConexionBD.abrirConexionBD().prepareStatement(consulta)) {
@@ -265,11 +265,11 @@ public class LibroDAO implements ILibroDAO {
                 libro.ponerEditorial(resultado.getString("Editorial"));
                 libro.ponerClasificacionLC(resultado.getString("clasificacionLC"));
                 libro.ponerNumeroPaginas(resultado.getInt("numeroPaginas"));
-                libros.add(libro);
+                librosNoDisponibles.add(libro);
             }
         }
         
-        return libros;
+        return librosNoDisponibles;
     }
     
     private String[] dividirTemas(String temas) {
